@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<body>
+<head>
+
+</head>
+<fieldset> 
+    <legend style="text-align: center;">Sign up for Newsletter</legend> 
+    <form style = "align-self: center;"action="index.php" method="POST"> 
+    <p> 
+
+    <label> ID:</label> 
+    <input type="text" name= "ID" id="txt" onkeyup="manage(this)"/><br><br>
+    <label> Name:</label> 
+    <input type="text" name= "username" id="txt2" onkeyup="manage(this)"/><br><br> 
+    <label>Email:</label> 
+    <input type="text" name= "email" id="txt3" onkeyup="manage(this)"/><br><br> 
+    <input type="submit" id = "btSubmit" value="Submit" disabled/> 
+    </form> 
+    </fieldset> 
+   
+</body>
+<script>
+	function manage(txt) {
+        var bt = document.getElementById('btSubmit');
+        if (txt.value != '' && txt2.value != '' && txt3.value != ''  ) {
+            bt.disabled = false;
+        }
+        else {
+            bt.disabled = true;
+        }
+    }    
+
+
+// 	Using ES6 feature.
+// 	let manage = (txt) => { 
+//     	let bt = document.getElementById('btSubmit');
+//         if (txt.value != '') {
+//             bt.disabled = false;
+//         }
+//         else {
+//             bt.disabled = true;
+//         }
+//     }
+</script>
+</html>
